@@ -19,7 +19,6 @@ return {
       local cmp = require("cmp")
 
       opts.mapping = vim.tbl_extend("force", opts.mapping, {
-        ["<CR>"] = vim.NIL,
 
         ["<Tab>"] = cmp.mapping(function(fallback)
           if require("copilot.suggestion").is_visible() then
