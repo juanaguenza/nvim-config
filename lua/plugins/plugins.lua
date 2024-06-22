@@ -1,5 +1,44 @@
 return {
   {
+    "echasnovski/mini.move",
+    version = false,
+    event = "VeryLazy",
+    config = function()
+      require("mini.move").setup({
+        right = "<M-l>",
+        down = "<M-j>",
+        up = "<M-k>",
+        line_left = "<M-h>",
+        mappings = {
+          left = "<M-h>",
+          line_right = "<M-l>",
+          line_down = "<M-j>",
+          line_up = "<M-k>",
+        },
+        options = {
+          reindent_linewise = true,
+        },
+      })
+    end,
+  },
+  {
+    "vyfor/cord.nvim",
+    build = "./build",
+    event = "VeryLazy",
+  },
+  {
+    "folke/zen-mode.nvim",
+    opts = {
+      plugins = {
+        tmux = { enabled = true },
+        kitty = { enabled = true, font = "+4" },
+      },
+      -- your configuration comes here
+      -- or leave it empty to use the default settings
+      -- refer to the configuration section below
+    },
+  },
+  {
     "zbirenbaum/copilot.lua",
     cmd = "Copilot",
     event = "InsertEnter",

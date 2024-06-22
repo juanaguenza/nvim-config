@@ -6,5 +6,9 @@ vim.filetype.add({
     mdx = "mdx",
   },
 })
+require("cord").setup({
+  -- your configuration comes here
+  -- or leave it empty to use the default settings
+})
 
 vim.treesitter.language.register("markdown", "mdx") -- the mdx filetype will use the markdown parser and queries.
